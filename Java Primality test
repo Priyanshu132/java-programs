@@ -1,0 +1,25 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String n = scanner.nextLine();
+       // BigInteger n= scanner.nextBigInteger();
+       //  int p= Integer.parseInt(n);
+        BigInteger bi = new BigInteger(n);
+         boolean l=bi.isProbablePrime(10);
+         System.out.println(l==true? "prime":"not prime"); 
+
+        scanner.close();
+    }
+}
