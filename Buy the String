@@ -1,0 +1,47 @@
+// codeForces Program
+
+// LINK :  https://codeforces.com/problemset/problem/1440/A
+
+import java.util.Scanner;
+
+public class Solution{
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        int t = s.nextInt();
+        
+        while(t-- > 0){
+            int n = s.nextInt();
+            int c_0 = s.nextInt();
+            int c_1 = s.nextInt();
+            int h = s.nextInt();
+            
+            String str = s.next();
+            char[] str_a;
+            str_a = str.toCharArray();
+            int count = 0;
+            for(char c : str_a){
+                int coin = 0;
+                if(c == '0'){
+                    coin = c_0;
+                }
+                else{
+                    coin = c_1;
+                }
+                int coin_ex = 0;
+                if(c == '1'){
+                    coin_ex = h + c_0;
+                }
+                else{
+                    coin_ex = h + c_1;
+                }
+                
+                count += coin_ex < coin ? coin_ex : coin;
+            }
+            
+            System.out.println(count);
+        }
+    }
+    
+}
